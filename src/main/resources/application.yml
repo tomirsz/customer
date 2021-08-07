@@ -21,6 +21,9 @@ info:
   serverInfo:
     port: ${server.port}
 
+eureka:
+  client: ${eureka-client}
+
 application:
   db-username: ${application.db-username}
   db-password: ${application.db-password}
