@@ -20,3 +20,7 @@ info:
     profile: ${spring.profiles.active}
   serverInfo:
     port: ${server.port}
+
+application:
+  db-username: ${application.db-username}
+  db-password: ${application.db-password}
