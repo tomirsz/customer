@@ -1,21 +1,16 @@
 package com.customer.model.response;
 
-import com.customer.model.dto.AccountDto;
 import com.customer.model.dto.CardDto;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@Builder
+@AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
-@AllArgsConstructor
-public class GetCustomerProductsResponse {
-    private Long customerId;
-    private String fullName;
-    private List<AccountDto> accounts;
+public class GetCardsResponse {
+
     private List<CardDto> cards;
 }

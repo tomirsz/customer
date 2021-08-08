@@ -2,7 +2,6 @@ package com.customer.provider;
 
 import com.customer.connector.AccountsConnector;
 import com.customer.model.dto.AccountDto;
-import com.customer.model.response.GetAccountsResponse;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

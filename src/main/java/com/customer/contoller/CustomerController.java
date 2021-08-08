@@ -2,6 +2,7 @@ package com.customer.contoller;
 
 import com.customer.exception.CustomerNotFoundException;
 import com.customer.model.dto.AccountDto;
+import com.customer.model.dto.CardDto;
 import com.customer.model.dto.CustomerDto;
 import com.customer.model.response.GetCustomerProductsResponse;
 import com.customer.model.response.GetCustomerResponse;
@@ -45,11 +46,13 @@ public class CustomerController {
         }
 
         List<AccountDto> customerAccounts = productService.findCustomerAccounts(customerId);
+        List<CardDto> customerCards = productService.findCustomerCards(customerId);
 
         return ResponseEntity.ok().body(GetCustomerProductsResponse.builder()
                 .customerId(customerDto.getId())
                 .fullName(customerDto.getFirstName() + " " + customerDto.getLastName())
                 .accounts(customerAccounts)
+                .cards(customerCards)
                 .build());
     }
 }
