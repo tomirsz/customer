@@ -20,7 +20,7 @@ public class JpaConfig {
 
     @Bean
     public DataSource getDataSource() {
-        var dataSourceBuilder = DataSourceBuilder.create();
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.username(dbUserName);
         dataSourceBuilder.password(dbPassword);
         return dataSourceBuilder.build();

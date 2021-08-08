@@ -24,6 +24,11 @@ info:
 eureka:
   client: ${eureka-client}
 
+feign:
+  hystrix:
+    enabled: true
+
 application:
   db-username: ${application.db-username}
   db-password: ${application.db-password}
+
